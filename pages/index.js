@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import NavbarWrap from "./components/navbar";
 import Hero from "./components/hero"
+import Category from "./components/category"
+import Footer from "./components/footer"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +33,13 @@ export default function Home() {
       {/* Hero Section Start */}
       <Hero />
       {/* Hero Section End */}
+
+      {/* Hero Section Start */}
+      <Category />
+      {/* Hero Section End */}
+
+
+      <Footer />
     </>
   );
 }

@@ -3,6 +3,12 @@
 	padding-bottom: 0.9rem;
 	background-color: #1660aa;
 }
+.logo {
+	max-height: 80px; /* Adjust to fit your navbar */
+	width: auto;
+	transform: scale(5); /* Zooms 1.5x */
+	transform-origin: center;
+}
 .mainNav .navbartoggler {
 	padding: 0.75rem;
 	font-size: 0.75rem;
@@ -24,20 +30,26 @@
 .mainNav .navbarbrand img {
 	height: 1.5rem;
 }
+
 .navlink {
 	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 0.95rem;
-	color: #fff;
+	color: #000;
 	letter-spacing: 0.0625em;
 }
 .navlink.active,
 .navlink:hover {
-	color: #212529;
+	color: #000;
 	background-color: #ffc800;
 	border-radius: 1em;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.serviceLogoImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 @media (min-width: 992px) {
@@ -68,26 +80,27 @@
 	.mainNav.navbar-shrink .navbarbrand img {
 		height: 1.5rem;
 	}
-	.mainNav .navbar-nav .nav-item {
+	.mainNav .navbarNav .navItem {
 		margin-right: 1rem;
 	}
-	.mainNav .navbar-nav .nav-item:last-child {
+	.mainNav .navbarNav .navItem:last-child {
 		margin-right: 0;
 	}
 }
 
 /* Header CSS */
-header.masthead {
+.masthead {
 	padding-top: 10.5rem;
 	padding-bottom: 6rem;
 	text-align: center;
 	color: #fff;
+	background: #072f58;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
 	background-size: cover;
 }
-header.masthead .masthead-subheading {
+.masthead .mastheadSubheading {
 	font-size: 1.5rem;
 	font-style: italic;
 	line-height: 1.5rem;
@@ -96,7 +109,7 @@ header.masthead .masthead-subheading {
 		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-header.masthead .masthead-heading {
+.masthead .mastheadHeading {
 	font-size: 3.25rem;
 	font-weight: 700;
 	line-height: 3.25rem;
@@ -107,20 +120,135 @@ header.masthead .masthead-heading {
 }
 
 @media (min-width: 768px) {
-	header.masthead {
+	.masthead {
 		padding-top: 17rem;
 		padding-bottom: 12.5rem;
 	}
-	header.masthead .masthead-subheading {
+	.masthead .mastheadSubheading {
 		font-size: 2.25rem;
 		font-style: italic;
 		line-height: 2.25rem;
 		margin-bottom: 2rem;
 	}
-	header.masthead .masthead-heading {
+	.masthead .mastheadHeading {
 		font-size: 4.5rem;
 		font-weight: 700;
 		line-height: 4.5rem;
 		margin-bottom: 4rem;
 	}
+}
+
+/* About section css */
+
+.about {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.aboutImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.aboutContent {
+	padding: 60px 25px;
+	text-align: center;
+	max-width: 760px;
+	margin: auto;
+}
+
+.aboutH2 {
+	color: var(--very-dark-desaturated-blue);
+	font-size: 32px;
+	margin-bottom: 30px;
+}
+
+.aboutP {
+	color: var(--dark-grayish-blue);
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+
+.aboutLink {
+	position: relative;
+	color: var(--very-dark-desaturated-blue);
+	font-size: 16px;
+	text-transform: uppercase;
+	z-index: 1;
+}
+
+.aboutLink::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -8px);
+	background: var(--yellow);
+	width: calc(100% + 20px);
+	height: 10px;
+	border-radius: 10px;
+	opacity: 0.3;
+	z-index: -1;
+	transition: var(--default-transition);
+}
+
+.aboutLink:hover::after {
+	opacity: 1;
+}
+
+.pink::after {
+	background: var(--soft-red);
+}
+
+.services {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.serviceBox {
+	position: relative;
+}
+
+.imgBox {
+	height: 600px;
+	overflow: hidden;
+}
+
+.serviceImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.serviceAbsoluteContent {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 100%;
+	max-width: 380px;
+	padding: 20px;
+}
+
+.serviceH3 {
+	font-size: 28px;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+}
+
+.serviceP {
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.serviceH3.cyan,
+.serviceP.cyan {
+	color: var(--dark-desaturated-cyan);
+}
+
+.serviceH3.blue,
+.serviceP.blue {
+	color: var(--dark-blue);
 }
