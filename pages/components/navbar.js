@@ -12,23 +12,23 @@ import Logo from "../../public/LOGPOSE.png"
 const NavbarWrap = () => {
     return (
         <>
-            <Navbar expand="lg" className={`${styles.mainNav} bg-body-tertiary shadow p-3 mb-5 bg-body rounded`} fixed="top">
+            <Navbar expand="lg" className={`${styles.mainNav} bg-body-tertiary shadow p-3 mb-5 bg-body rounded justify-content-end flex-grow-1`} fixed = "top">
                 <Container>
-
                     <Navbar.Brand href="#home" className={styles.navbarbrand}>
                         <Image
                             src={Logo}
-                            className={`${styles.logo} d-inline-block align-top`}
+                            className={`${styles.logo} d-inline-block align-top ms-2`}
                             alt="LogPose logo"
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle className={styles.navbartoggler} aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto py-4 py-lg-0 g-2">
-                            <Nav.Link className={styles.navlink} href="#home">Home</Nav.Link>
-                            <Nav.Link className={styles.navlink} href="#link">Products</Nav.Link>
-                            <Nav.Link className={styles.navlink} href="#link">Request Quote</Nav.Link>
-                            <Nav.Link className={styles.navlink} href="#link">Contact US</Nav.Link>
+                        <Nav className={`ms-auto py-4 py-lg-0 g-2`}>
+                            <Nav.Link className={`${styles.navlink} ms-2`} href={`/`}>Home</Nav.Link>
+                            <Nav.Link className={`${styles.navlink} ms-2`} href={`/products`}>Products</Nav.Link>
+                            <Nav.Link className={`${styles.navlink} ms-2`} href={`/quote`}>Request Quote</Nav.Link>
+                            <Nav.Link className={`${styles.navlink} ms-2`} href={`/contact`}>Contact US</Nav.Link>
+                            <Nav.Link className={`${styles.navlink} ms-2`} href={`/careers`}>Careers</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
