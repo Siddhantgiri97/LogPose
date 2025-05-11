@@ -19,8 +19,8 @@ const Quote = () => {
                     <div className="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div className="text-center mb-5">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
-                            <h1 className="fw-bolder">Get in touch</h1>
-                            <p className="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
+                            <h1 className="fw-bolder">Request Quote</h1>
+                            <p className="lead fw-normal text-muted mb-0">Precision starts with the right partnership.</p>
                         </div>
                         <div className="row gx-5 justify-content-center">
                             <div className="col-lg-8 col-xl-6">
