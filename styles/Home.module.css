@@ -145,10 +145,10 @@
 
 /* About section css */
 
-.about {
+/* .about {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-}
+} */
 
 .aboutImg {
 	width: 100%;
@@ -206,10 +206,10 @@
 	background: var(--soft-red);
 }
 
-.services {
+ /* .services {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-}
+}  */
 
 .serviceBox {
 	position: relative;
